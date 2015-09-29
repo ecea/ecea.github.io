@@ -9,27 +9,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E pulse</title>
-
-    <!-- Bootstrap Core CSS -->
+    <title>E-Pulse</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/pulse_front.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.js"></script>
+    <script src="script/main.js"></script>
 
     
 </head>
 
-<body>
+<body ng-app="epulse" ng-controller="bodyctrl">
 
+    <div class="header">
+        <h1>PULSE<h1>
+    </div>
     <br>
     <br>
-    
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="card transition">
                     <h2 class="transition">Artificial muscles</h2>
-                    <p>YARN MUSCLES COULD LAUNCH CATAPULTS, POWER INTELLIGENT TEXTILES, AND HELP ROBOTS MOVE MORE WEIGHT</p>
-                    <div class="cta-container transition"><a href="#" class="cta">Read Article</a></div>
+                    <p>Yarn muscles could launch catapults, power intelligent textiles, and help robots move more weight.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(1)" class="cta">Read Article</a></div>
                     <div class="card_circle transition" style="background: url('images/nanamuscles_tumb.jpg')"></div>
                 </div>
             </div>
@@ -37,7 +40,7 @@
                 <div class="card transition">
                     <h2 class="transition">Are you ready to program bacteria?</h2>
                     <p>How handy would it be if, instead of taking your broken circuit board back to the electronics  market , you could just prompt it to heal itself?...</p>
-                    <div class="cta-container transition"><a href="#" class="cta">Read Article</a></div>
+                    <div class="cta-container transition"><a ng-click="showarticle(2)" class="cta">Read Article</a></div>
                     <div class="card_circle transition" style="background: url('images/program_bacteria_tumb.jpg')"></div>
                 </div>
             </div>
@@ -45,7 +48,7 @@
                 <div class="card transition">
                     <h2 class="transition">Solid-State Electronics</h2>
                     <p>Solid-state switching circuits are the fundamental components of modern computers systems. It is worth spending a minute to have a glance on the effects....</p>
-                    <div class="cta-container transition"><a href="#" class="cta">Read Article</a></div>
+                    <div class="cta-container transition"><a ng-click="showarticle(3)" class="cta">Read Article</a></div>
                     <div class="card_circle transition" style="background: url('images/solid_state_elec.jpg')"></div>
                 </div>
             </div>
@@ -57,29 +60,78 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card transition">
-                    <h2 class="transition">Awesome Headline</h2>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                    <div class="cta-container transition"><a href="#" class="cta">Read Article</a></div>
-                    <div class="card_circle transition" style="background: url('http://lorempixel.com/400/200/')"></div>
+                    <h2 class="transition">Laser for Fast Ignition Experiments</h2>
+                    <p>The most Powerful Laser beam ever created has been recently fired at Osaka University in Japan.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(4)" class="cta">Read Article</a></div>
+                    <div class="card_circle transition" style="background: url(images/lfex_main.jpg)"></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card transition">
-                    <h2 class="transition">Awesome Headline</h2>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                    <div class="cta-container transition"><a href="#" class="cta">Read Article</a></div>
-                    <div class="card_circle transition" style="background: url('http://lorempixel.com/400/200/')"></div>
+                    <h2 class="transition">Flexible electronics</h2>
+                    <p> Flexible circuits came into existence owing to the endeavour of Japanese  who hardened to bring out to this world this flexible circuit technology.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(5)" class="cta">Read Article</a></div>
+                    <div class="card_circle transition" style="background: url(images/flex_elec_main.jpg)"></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card transition">
-                    <h2 class="transition">Awesome Headline</h2>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                    <div class="cta-container transition"><a href="#" class="cta">Read Article</a></div>
-                    <div class="card_circle transition" style="background: url('http://lorempixel.com/400/200/')"></div>
+                    <h2 class="transition">Spintronics</h2>
+                    <p>Electronics is based on measuring the tiny electrical charge of electrons passing through electronic circuits. An alternative approach under development is spintronic.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(6)" class="cta">Read Article</a></div>
+                    <div class="card_circle transition" style="background: url(images/spintronics_main.jpg)"></div>
                 </div>
             </div>
         </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card transition">
+                    <h2 class="transition">Quantum Communication</h2>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(7)" class="cta">Read Article</a></div>
+                    <div class="card_circle transition" style="background: url(images/quan_comm_main.jpg)"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card transition">
+                    <h2 class="transition">Talking to Mars</h2>
+                    <p>With advancements in the field of communication, Teleportation is more likely to become possible.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(8)" class="cta">Read Article</a></div>
+                    <div class="card_circle transition" style="background: url(images/talking_to_mars_main.png)"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card transition">
+                    <h2 class="transition">Wi-See</h2>
+                    <p>Got Wi-Fi in your Home? Now, we could make hand gestures to control things in the near future! Yes! Say hello to Wi-See, the Next generation Wi-Fi!.</p>
+                    <div class="cta-container transition"><a ng-click="showarticle(9)" class="cta">Read Article</a></div>
+                    <div class="card_circle transition" style="background: url(images/wi_see_main.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="articlepanel" ng-hide="articleVisble">
+        <div ng-include src=" partial==1 ? 'articles/article1.html' : null" ></div>
+        <div ng-include src=" partial==2 ? 'articles/article2.html' : null" ></div>
+        <div ng-include src=" partial==3 ? 'articles/article3.html' : null" ></div>
+        <div ng-include src=" partial==4 ? 'articles/article4.html' : null" ></div>
+        <div ng-include src=" partial==5 ? 'articles/article5.html' : null" ></div>
+        <div ng-include src=" partial==6 ? 'articles/article6.html' : null" ></div>
+        <div ng-include src=" partial==7 ? 'articles/article7.html' : null" ></div>
+        <div ng-include src=" partial==8 ? 'articles/article8.html' : null" ></div>
+        <div ng-include src=" partial==9 ? 'articles/article9.html' : null" ></div>
+        <div class="button123-div">
+            <button type="button" class="btn btn-link btn-lg" ng-click="hidearticle()">Close</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="footer">
+        <h4>Designed by Web and Tech team of ECEA</h4>
     </div>
 </body>
 
